@@ -12,7 +12,7 @@ Proje web tabanli bir api olup ihtiyac sahibi ve yardimseverler arasinda bir kop
 
 Uye olan kullanicilar aralarinda urun transferi yaparak uygulamayi kullanabilirler.
 
-Uygulamanin amaci toplumdaki ekonomik ve sosyolojik dengeyi ve yakinlasmaktir.
+Uygulamanin amaci toplumdaki ekonomik ve sosyolojik dengeyi saglamak ve yakinlasmaktir.
 
 Proje okul ve is durumumdan dolayi tam olarak tamamlanamamistir. 
 Projeyi degerlendirirken tek basima gelistirdigimi goz onunde bulunduracaginizi dusunuyorum. :)
