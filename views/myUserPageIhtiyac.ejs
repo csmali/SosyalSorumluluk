@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>My App</title>
+	<link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
+</head>	
+<body>
+	<div class="container">
+		<div class="personalInfos">
+			<h3>Ihtiyac Sahibi</h3>
+
+				
+	<form action="/" method="get">
+	
+			<style>
+				.button {
+					background-color: #4CAF50; /* Green */
+					border: none;
+					color: white;
+					padding: 12px 24px;
+					text-align: center;
+					text-decoration: none;
+					display: inline-block;
+					font-size: 16px;
+					margin-top: 450px;
+					margin-left:300px;
+					cursor: pointer;
+				}
+
+				.button1 {border-radius: 2px;}
+
+			</style> 
+			
+				
+				<h4>Isim </h4>
+				<u1>
+					<li><%= userItems[1].desc %></li>
+				</u1>
+				<h4>Soyisim </h4>
+				<u1>
+					<li><%= userItems[2].desc %></li>
+				</u1>
+				<h4>Email  </h4>
+				<u1>
+					<li><%= userItems[3].desc %></li>
+				</u1>
+				<h4>Sehir </h4>
+				<u1>
+					<li><%= userItems[4].desc %></li>
+				</u1>
+				<h4>Durum </h4>
+				<u1>
+					<li><%= userItems[5].desc %></li>
+				</u1>
+			</div>
+			<div class="personalInfos2">
+				<h4>Kisisel Tanitim  </h4>
+				<u1>
+					<li><%= userItems[6].desc %></li>
+				</u1>
+				<h3>Talep Ettigim Urunler </h3>
+			</div>
+			<style>
+			.personalInfos{
+				float: left;
+				width:50%;
+				font-family: "SIMPSON";
+			
+			}
+			.personalInfos2{
+				float: left;
+				width: 50%;
+				font-family: "SIMPSON";
+
+			} 
+							</style> 
+							
+			<button class="button button1">Cikis Yap</button>
+
+	</form>
+
+	</div>
+	<script src="jquery/dist/jquery.js"></script>
+	<script src="bootstrap/dist/js/bootstrap.js"></script>
+
+</body>
+</html>

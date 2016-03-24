@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>My App</title>
+	<link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
+</head>	
+<body>
+	<div class="container">
+		<div class="personalInfos">
+			<h3>Yardimsever</h3>
+				<form action="/login" method="post">
+					
+				
+				<style>
+				.button {
+					background-color: #4CAF50; /* Green */
+					border: none;
+					color: white;
+					padding: 12px 24px;
+					text-align: center;
+					text-decoration: none;
+					display: inline-block;
+					font-size: 16px;
+					margin-top: 450px;
+					margin-left:300px;
+					cursor: pointer;
+				}
+
+				.button1 {border-radius: 2px;}
+				<form action="/" method="get">
+					</style> 
+			
+				<h4>Isim </h4>
+				<u1>
+					<li><%= userItems[0].desc %></li>
+				</u1>
+				<h4>Soyisim </h4>
+				<u1>
+					<li><%= userItems[1].desc %></li>
+				</u1>
+				<h4>Email  </h4>
+				<u1>
+					<li><%= userItems[2].desc %></li>
+				</u1>
+				<h4>Sehir </h4>
+				<u1>
+					<li><%= userItems[3].desc %></li>
+				</u1>
+				<h4>Durum </h4>
+				<u1>
+					<li><%= userItems[4].desc %></li>
+				</u1>
+				<h4>Kisisel Tanitim  </h4>
+				<u1>
+					<li><%= userItems[5].desc %></li>
+				</u1>
+			</div>
+			<div class="personalInfos2">
+				
+				<h3>Urunlerim </h3>
+				
+				
+					<button type="submit" class="btn btn-primary btn-lg" formaction="/urunListele">Urunleri Listele</button>
+					<% for (var i = 0; i< urunItems.length;i++) { %>
+					<li style="margin-top:5px;"><%= "Adi : " + urunItems[i].urunAdi %></></li>
+					<p><%=  urunItems[i].urunAciklamasi   %></p>
+
+					<% } %>
+				<label style="margin-top:10px;">Urun Ismi:</label>
+				<input type="text" class="form-control" name="urunIsmi">
+				
+				<label style="margin-top:20px;">Urun Aciklamasi :</label>
+			
+					<input type="text" class="form-control" name="urunInfo">
+				
+					<button type="submit"  style="margin-top:20px;" class="btn btn-primary btn-lg" formaction="/urunEkle">Urunu Listeme Ekle</button>
+					
+
+			</div>
+			<style>
+			
+			
+			.personalInfos{
+				float: left;
+				width:50%;
+				font-family: "SIMPSON";
+			
+			}
+			.personalInfos2{
+				float: left;
+				width: 50%;
+				font-family: "SIMPSON";
+
+			} 
+							</style> 
+							
+			<button class="button">Cikis Yap</button>
+
+			
+	
+	
+	</div>	
+		</form>
+	<script src="jquery/dist/jquery.js"></script>
+	<script src="bootstrap/dist/js/bootstrap.js"></script>
+
+</body>
+</html>

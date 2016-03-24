@@ -1,0 +1,19 @@
+{
+  "name": "sosyalsorumluluk",
+  "version": "1.0.0",
+  "description": "projectcode",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.4.1",
+    "mongoose": "^4.4.7",
+    "passport": "~0.2.0",
+    "passport-local": "~1.0.0"
+  },
+  "devDependencies": {}
+}

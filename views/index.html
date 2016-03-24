@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>My App</title>
+	<link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
+</head>	
+<body>
+	<div class="container">
+		<h1>"Giris"</h1>
+		<u1>
+			<% for (var i = 0; i< nameItems.length;i++) { %>
+				<li><%= nameItems[i].desc + "  " + lastNameItems[i].desc %></li>
+				
+			<% } %>
+		</u1>
+		<u1>
+			<% for (var i = 0; i< userItems.length;i++) { %>
+				<li><%= userItems[i].desc %></li>
+
+			<% } %>
+		</u1>
+		
+		<%= new Date() %>
+		
+		<form action="/add" method="post">
+			<style type="text/css">
+			.btn {
+				background-color:red;
+				cursor:pointer;
+				width: 84px;
+				height: 45px; 
+				margin-left: 600px;
+				margin-top: 1px;
+			}
+			</style>
+
+		<button class="btn">Click me</button>
+			<div style="text-align:left;">First name: <input type="text" name="fname"><br>	
+			<div style="text-align:center;margin-left:100px">Last name: <input type="text" name="lname"><br>
+	
+		</form>
+		
+		<form action="/readFile" method="get"> 
+		<input type="submit"> 
+		
+		</form>
+		
+				<input type="text"class="inputs" placeholder="Name" /> 
+		<br>
+		<input type="text"class="inputs" placeholder="e-mail" /> 
+		<br>
+		 <input type="password" class="inputs"placeholder="Password" /> 
+					 
+				   
+		<style> 
+		 
+		 .inputs {
+			padding: 8px;
+			border-radius: 3px;
+			border: 1px solid #CCC;
+			background-image: none;
+			width: 270px;
+		}
+
+		.inputs:focus {
+			outline-color: #54B4AD;
+		}
+		</style> 
+
+	</div>
+	
+	<script src="jquery/dist/jquery.js"></script>
+	<script src="bootstrap/dist/js/bootstrap.js"></script>
+
+</body>
+</html>

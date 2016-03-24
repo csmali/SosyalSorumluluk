@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>My App</title>
+	<link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
+</head>	
+<body>
+	<div class="container">
+	<h2>Giris Yap</h2>
+	
+	<form action="/login" method="post">
+	
+		<style>
+			.button {
+				background-color: #4CAF50; /* Green */
+				border: none;
+				color: white;
+				padding: 12px 24px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 16px;
+				margin: 10px 2px;
+				cursor: pointer;
+			}
+
+			.button1 {border-radius: 2px;}
+
+		</style> 
+		
+		<input type="email" class="inputs" name="logEmail" placeholder="Email" /> 
+		<br>
+		<input type="password" class="inputs" name="logPassword" placeholder="Password" /> 
+		<br>
+		<style> 
+			
+			 .inputs {
+				padding: 8px;
+				border-radius: 3px;
+				border: 3px solid #CCC;
+				background-image: none;
+				height:40px;
+				width: 250px;
+			}
+			.inputs:focus {
+				outline-color: #54B4AD;
+			}
+					</style> 
+		<button class="button button1">Giris Yap</button>		
+	</form>
+
+	</div>
+	
+	
+	<style> 
+		.container{
+			 text-align : center;
+			font-family: "SIMPSON";
+			margin-top:100px;
+		}
+				</style>
+	<script src="jquery/dist/jquery.js"></script>
+	<script src="bootstrap/dist/js/bootstrap.js"></script>
+
+</body>
+</html>

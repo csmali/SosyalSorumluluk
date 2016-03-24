@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>My App</title>
+	<link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
+</head>	
+<body>
+	<div class="container">
+		<h2>Yardimlasma Sitesine Hosgeldiniz</h2>
+		<style>
+		.button {
+			background-color: #4CAF50; /* Green */
+			border: none;
+			color: white;
+			padding: 12px 24px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 10px 2px;
+			cursor: pointer;
+		}
+
+		.button1 {border-radius: 2px;}
+		.button2 {background-color: #f44336;}		
+	</style> 
+		<form action="/add" method="post">
+			
+			<!-- <div style="text-align:left;">First name: <input type="text" name="fname"><br>	 -->
+			<!-- <div style="text-align:center;margin-left:100px">Last name: <input type="text" name="lname"><br> -->
+	
+		</form>
+		
+		<form action="/add" method="post">
+
+		<input type="text"class="inputs" name="fname" placeholder="Name" /> 
+		<br>
+		<input type="text"class="inputs" name="lname" placeholder="Surname" /> 
+		<br>
+		<input type="text"class="inputs" name="city" placeholder="City" /> 
+		<br>
+		<input type="email" class="inputs" name="email" placeholder="Email" /> 
+		<br>
+		<input type="password" class="inputs" name="password" placeholder="Password" /> 
+		<br>
+		<input type="kisiselInfo" class="inputs" name="personalInfo" placeholder="Kendinizi tanitan bir yazi yaziniz"  style="height: 200px;"/> 
+		<br>
+		
+
+		<select class="selectpicker" data-style="btn-info" name="selectpicker">
+				<option name="table1">Ihtiyac Sahibi</option>
+				<option name="table2">Yardimsever</option>
+		</select>		
+		
+	
+
+		<button class="button button1">Kayit ol</button>
+
+		
+
+		
+		  
+	
+
+		</form>
+		<form action="/loginPage" method="get">
+					<button class="button button2">Uye Giris</button>
+
+		</form>
+	</div>
+	
+	<style> 
+		
+		 .inputs {
+			padding: 8px;
+			border-radius: 3px;
+			border: 3px solid #CCC;
+			background-image: none;
+			height:40px;
+			width: 335px;
+		}
+		.inputs:focus {
+			outline-color: #54B4AD;
+		}
+		.container{
+			 text-align : center;
+			font-family: "SIMPSON";
+			
+		}
+				</style> 
+	
+
+
+
+	<script src="jquery/dist/jquery.js"></script>
+	<script src="bootstrap/dist/js/bootstrap.js"></script>
+
+</body>
+</html>
