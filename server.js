@@ -23,6 +23,10 @@ var currentUserStatus=1;		// Ihtiyac sahibi miyiz yoksa yardimsever miyiz boolea
 var isUserFound =false; 
 var ihtiyacsahibiUrunleri = [{urunAciklamasi:'Urunleri Listelemek Icin Asagidaki',urunAdi:'Butona Tiklayiniz'}];;
 var yardimseverUrunleri = [{urunAciklamasi:'Urunleri Listelemek Icin Asagidaki',urunAdi:'Butona Tiklayiniz'}];;
+var talipOlunanUrunler = [{urunAciklamasi:'Urunleri Listelemek Icin Asagidaki',urunAdi:'Butona Tiklayiniz'}];;
+var uruneTalipOlanlar = [{urunAciklamasi:'Urunleri Listelemek Icin Asagidaki',urunAdi:'Butona Tiklayiniz'}];;
+
+
 app.get('/',function(req,res){
 	res.render('index.ejs',{
 		title:'My App',nameItems:firstNameItems,lastNameItems:lastNameItems
@@ -93,7 +97,7 @@ app.get('/myUserPage',function(req,res){
 	});	
 	else
 		res.render('myUserPageYardimsever.ejs',{
-		title:'My App',userItems:userItems,urunItems:yardimseverUrunleri
+		title:'My App',userItems:userItems,urunItems:yardimseverUrunleri,talipItems:uruneTalipOlanlar
 	});	
 	
 		
@@ -161,17 +165,33 @@ app.post('/urunEkle', function (req, res) {
 	res.redirect('/myUserPage');
 });
 
-// when Add to Bottom button is clicked
 app.post('/urunListele', function (req, res) {
 	while(yardimseverUrunleri.length > 0) {
 		yardimseverUrunleri.pop();
 	}	
+	while(ihtiyacsahibiUrunleri.length > 0) {
+		ihtiyacsahibiUrunleri.pop();
+	}
+	while(uruneTalipOlanlar.length > 0) {
+		uruneTalipOlanlar.pop();
+	}		
+		
+	var counter=0;
 	 var contents = fs.readFileSync("urunler.json");
 	 var jsonContent = JSON.parse(contents);
 	 for(var urunid in jsonContent){
+	
 		 if(jsonContent[urunid].urunsahibiemail === activeEmail){
+					 
 				yardimseverUrunleri.push({id:yardimseverUrunleri.length+1,urunAdi:jsonContent[urunid].urunadi,urunAciklamasi:jsonContent[urunid].urunaciklamasi});
-			console.log("dogru mu   ", jsonContent[urunid].urunid);
+				ihtiyacsahibiUrunleri.push({id:ihtiyacsahibiUrunleri.length+1,urunAdi:jsonContent[urunid].urunadi,urunAciklamasi:jsonContent[urunid].urunaciklamasi});
+				
+				for(var talipid in jsonContent[urunid].talipler ){
+					console.log("burdayis");
+					console.log(jsonContent[urunid].talipler[talipid].talipemail);
+					uruneTalipOlanlar.push({id:counter,talipOlan:jsonContent[urunid].talipler[talipid].talipemail});
+				}
+				counter++;
 		 }
 	}
 	res.redirect('/myUserPage');
