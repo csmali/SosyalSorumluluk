@@ -60,12 +60,13 @@
 				
 				<h3>Urunlerim </h3>
 				
-				
-					<button type="submit" class="btn btn-primary btn-lg" formaction="/urunListele">Urunleri Listele</button>
+					<button type="submit" onclick="myFunction()" class="btn btn-primary btn-lg" formaction="/urunListele">Urunleri Listele</button>
 					<% for (var i = 0; i< urunItems.length;i++) { %>
 					<li style="margin-top:5px;"><%= "Adi : " + urunItems[i].urunAdi %></></li>
 					<p><%=  urunItems[i].urunAciklamasi   %></p>
-
+							<% for (var j = 0; j< talipItems.length;j++) { %>
+								<li style="margin-top:15px;margin-left:10px; " ><%= "Talip Email  : " + talipItems[j].talipOlan %></></li>
+							<% } %>
 					<% } %>
 				<label style="margin-top:10px;">Urun Ismi:</label>
 				<input type="text" class="form-control" name="urunIsmi">
